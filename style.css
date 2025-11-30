@@ -1,0 +1,63 @@
+*{margin:0;padding:0;font-family:"Poppins",sans-serif;box-sizing:border-box}
+body{
+    background:#080808;
+    color:white;
+    overflow:hidden;
+}
+#game{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#screen{
+    width:60%;
+    text-align:center;
+    animation:fadein 1s;
+}
+#title{
+    font-size:3rem;
+    margin-bottom:20px;
+    letter-spacing:2px;
+    text-shadow:0 0 15px #4f9bff;
+}
+#text{
+    font-size:1.2rem;
+    opacity:0.8;
+    margin-bottom:30px;
+}
+#choices{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.choice{
+    background:#111;
+    padding:15px 20px;
+    border:2px solid #4f9bff;
+    border-radius:10px;
+    transition:0.3s;
+    cursor:pointer;
+    font-size:1.1rem;
+}
+.choice:hover{
+    background:#4f9bff;
+    color:#000;
+    box-shadow:0 0 20px #4f9bff;
+}
+
+.fade{
+    animation:fadeout 0.6s forwards;
+}
+
+@keyframes fadeout{
+    to{opacity:0;transform:scale(0.95)}
+}
+
+@keyframes fadein{
+    from{opacity:0;transform:scale(1.05)}
+    to{opacity:1;transform:scale(1)}
+}
